@@ -209,7 +209,7 @@ function startTogglTask(params, cb) {
         const togglProject = foundProject || {}
         toggl.startTimeEntry({
             description: taskName,
-            billable: false,
+            billable: true,
 			pid: togglProject.id
         }, cb);
 	})
