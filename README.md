@@ -1,78 +1,36 @@
-# [NAME]
+# zaetomat
 
-**Description of project goes here.**
+**Add task by timer from terminal console to Toggl and Slack.**
 
-## Installation
-
-First, if you have not done so already, install [Homebrew](http://brew.sh/):
+### Install zaetomat via npm
 
 ```bash
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ npm install zaetomat -g
 ```
 
-Next, install [Node.js](https://nodejs.org/en/):
+Set token for Toggl and Slack. Instruction on first start.
 
 ```bash
-$ brew install node
-# Tip! Run this on a regular basis:
-$ brew doctor && brew update && brew upgrade && brew cleanup && brew prune && brew doctor
-```
-
-Once the above steps are complete, and your system is happy …
-
-### Install [NAME] via npm
-
-```bash
-$ npm i [NPM] -g
-```
-
-<mark>Alternative installation options; putting here as reminders, feel free to remove the ones you are not using:</mark>
-
-### GitHub, public repo
-
-```bash
-$ npm i [USER]/[REPO] -g
-```
-
-### GitHub, private repo
-
-```bash
-$ npm i git+https://token:x-oauth-basic@github.com/[USER]/[REPO].git#master -g
-# … or:
-$ npm i git+ssh://git@github.com/[USER]/[REPO].git#master -g
-```
-
-### Bitbucket, public repo
-
-```bash
-$ npm i git+ssh://git@bitbucket.org/[USER]/[REPO].git#master -g
-```
-
-### Bitbucket, private repo
-
-```bash
-$ npm i git+https://username:password@bitbucket.org/[USER]/[REPO].git#master -g
-# … or:
-$ npm i git+ssh://git@bitbucket.org/[USER]/[REPO].git#master -g
+$ zaetomat
 ```
 
 ## Usage
 
-Activate in current directory:
+Add task right now:
 
 ```bash
-$ cd to/a/directory/
-$ [COMMAND] -d .
+$ zaetomat -t -30 -n 'CSSSR-XXX taskname'
 ```
 
-… or, specify path to a directory:
+Add task after 30 minutes of timer:
 
 ```bash
-$ [COMMAND] -d to/a/directory/
+$ zaetomat -t 30 -n 'CSSSR-XXX taskname'
 ```
 
-Get help:
+Add Dinner for 60 minutes and say about it in Slack channel #kitchen:
 
 ```bash
-$ [COMMAND] -h
+$ zaetomat -t 60 -k 'kitchen'
 ```
+
