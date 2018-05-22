@@ -49,7 +49,6 @@ const defaultConfig = {
 const path = `${getHomeDir()}/.zaetomat.json`;
 
 if (!fs.existsSync(path)) {
-	console.info('try to write')
 	fs.writeFileSync(path, JSON.stringify(defaultConfig, null, 2) , 'utf-8');
 }
 
@@ -75,7 +74,7 @@ function getBackTime(time) {
 function startDinner() {
 	utilities.title('DINNER STARTED ', options.kitchen);
 	
-	sayTextToChannel('zaetomat', `:meat_on_bone: Dinner till ${getBackTime(options.time)}msk from #zaetomat`, config, (ts) => {
+	sayTextToChannel(options.kitchen, `:meat_on_bone: Dinner till ${getBackTime(options.time)}msk from #zaetomat`, config, (ts) => {
         const time = options.time
         const duration = time * 60 * 1000
 
@@ -105,7 +104,7 @@ function finishDinner(timer, ts) {
 	process.stdin.pause();
 	clearStatusAndExit();
 	utilities.title('DINNER FINISHED ', options.kitchen);
-	sayTextToChannel('zaetomat', `Dinner finished! I am here now!`, config, () => {}, ts)
+	sayTextToChannel(options.kitchen, `Dinner finished! I am here now!`, config, () => {}, ts)
 }
 
 function startApp() {

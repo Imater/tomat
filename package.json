@@ -2,15 +2,15 @@
   "name": "zaetomat",
   "version": "1.0.0",
   "description": "Add task to Toggl and set Slack away status",
-  "author": "Imater",
-  "license": "Apache 2.0",
+  "author": "imater <eugene.leonar@gmail.com>",
+  "license": "Apache-2.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node . -h"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "github",
+    "url": "git+https://github.com/Imater/tomat.git"
   },
   "bin": {
     "zaetomat": "app/bridge.js"
@@ -31,5 +31,16 @@
     "toggl-api": "^1.0.1",
     "underscore": "^1",
     "yargs": "^6"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Imater/tomat/issues"
+  },
+  "homepage": "https://github.com/Imater/tomat#readme",
+  "devDependencies": {},
+  "keywords": [
+    "toggl",
+    "slack",
+    "task",
+    "managment"
+  ]
 }
